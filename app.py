@@ -9,7 +9,7 @@ uploaded_file = st.file_uploader("動画ファイルをアップロードして�
 if uploaded_file is not None:
     if st.button('分析'):
         # Google ColabのAPIに動画を送信
-        api_url = "http://127.0.0.1:5000/"  # Colabのngrok URLを設定
+        api_url = "http://127.0.0.1:5000"  # Colabのngrok URLを設定
         files = {'video': uploaded_file}
         response = requests.post(api_url, files=files)
         
